@@ -17,13 +17,23 @@ This repository contains the complete software implementation and experimental s
 
 ---
 
-## 🎯 Target Foliar Classes
-The model is engineered to classify foliar imagery into five distinct diagnostic categories:
-* `0`: **Cassava Bacterial Blight (CBB)** (*Xanthomonas phaseoli pv. manihotis*)
-* `1`: **Cassava Brown Streak Disease (CBSD)** (*Cassava brown streak virus*)
-* `2`: **Cassava Green Mottle (CGM)** (*Cassava green mottle virus*)
-* `3`: **Cassava Mosaic Disease (CMD)** (*African cassava mosaic virus*)
-* `4`: **Healthy** (Symptom-free cassava foliage)
+## 🎯 Target Foliar & Co-Infection Classes
+The model is trained on **11 target classes** representing healthy foliage, individual disease symptoms, and CycleGAN-blended co-infections:
+
+### Single-Disease & Healthy Classes:
+* `0`: **Healthy** (Symptom-free foliage)
+* `1`: **Cassava Mosaic Disease (CMD)** (*African cassava mosaic virus*)
+* `2`: **Cassava Bacterial Blight (CBB)** (*Xanthomonas phaseoli pv. manihotis*)
+* `3`: **Cassava Green Mottle (CGM)** (*Cassava green mottle virus*)
+* `4`: **Cassava Brown Streak Disease (CBSD)** (*Cassava brown streak virus*)
+
+### Synthetic Co-Infection Classes:
+* `5`: **CMD+CBB**
+* `6`: **CMD+CGM**
+* `7`: **CMD+CBSD**
+* `8`: **CBB+CGM**
+* `9`: **CBB+CBSD**
+* `10`: **CGM+CBSD**
 
 ---
 
